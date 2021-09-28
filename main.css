@@ -6,10 +6,9 @@
 
 
 .titulo{
-    align-self: center;
-    align-content: center;
     text-align: center;
-    display: flex;
+    vertical-align: middle;
+    line-height: 90px;
 }
 .miniImagen{
     height: 30px;
