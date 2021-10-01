@@ -86,20 +86,25 @@ function sumarCarrito(e) {
   let items = document.getElementById("items");
   items.innerHTML = numitems + " items";
 
-  let description = e.target.parentElement.childNodes[1].innerHTML;
+  let description = e.target.parentElement.parentElement.childNodes[1].childNodes[0].innerHTML;
+  console.log(description);
 
   if (description in itemsCarrito) {
     itemsCarrito[description]["Qty"]++;
   } else {
-    let price = e.target.parentElement.childNodes[3].innerHTML;
+    let price = e.target.parentElement.parentElement.childNodes[3].childNodes[0].innerHTML;
+    let realPrice=price.substr(1,);
+
+    console.log(realPrice);
 
     item = {
       Qty: 1,
       Description: description,
-      Price: price,
+      Price: realPrice,
     };
     itemsCarrito[description] = item;
   }
+
 }
 function listaCarrito() {
   let total = 0;
