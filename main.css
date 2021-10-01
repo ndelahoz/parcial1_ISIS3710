@@ -92,27 +92,25 @@
   margin: 10px;
 }
 
-
 .titleProd {
-    height: 4rem;
-    vertical-align: middle;
-    line-height: 2rem;
-    font-weight: bold;
+  height: 4rem;
+  vertical-align: middle;
+  line-height: 2rem;
+  font-weight: bold;
 }
 
 .titleDes {
-    vertical-align: middle;
-    height: 12rem;
+  vertical-align: middle;
+  height: 12rem;
 }
 
 .titlePrice {
-    vertical-align: middle;
-    line-height: 2rem;
-    margin: 5px;
+  vertical-align: middle;
+  line-height: 2rem;
+  margin: 5px;
 }
 
-.titleBut{
-
+.titleBut {
   background-color: #021627;
   color: white;
   border: none;
@@ -122,4 +120,14 @@
   outline: inherit;
   height: 3rem;
   width: 7rem;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.contacto {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
 }

@@ -168,7 +168,7 @@ function listaCarrito() {
   divContainer.appendChild(divOrder);
 
   let divTotal = document.createElement("div");
-  divTotal.className = "col-9";
+  divTotal.className = "col-9 total";
   divTotal.innerHTML = "Total: $" + total;
   divOrder.appendChild(divTotal);
 
@@ -191,6 +191,7 @@ function listaCarrito() {
   divOrder.appendChild(divConfirm);
 
   let divFinal = document.createElement("div");
+  divFinal.className="contacto"
   divFinal.innerHTML =
     "Contact us: +57 3102105253 - info@restaurant.com - @restaurant";
   divContainer.appendChild(divFinal);
