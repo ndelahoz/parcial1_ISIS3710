@@ -1,16 +1,125 @@
-.logo{
-    height: 30px;
-    width: 40px;
+@font-face {
+  font-family: titulo;
+  src: url(Satisfy-Regular.ttf);
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  align-items: flex-start;
+  margin: 0px;
+}
+
+.items {
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 4rem;
+  margin: 0px;
+}
+
+.carrito {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn-primary {
+  background-color: khaki;
+  color: black;
+  border-color: black;
+  margin: 2px;
+}
+
+.btn-secundary {
+  background-color: red;
+  color: black;
+  border-color: blue;
+  margin: 2px;
+}
+
+.titulo {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.miniImagen {
+  height: 10rem;
+  width: 100%;
+}
+
+.empresa {
+  font-family: titulo;
+  font-size: 3rem;
+}
+
+.mainImage {
+  width: 100%;
+}
+
+.menu {
+  background-color: #021627;
+}
+
+.btn-banner {
+  height: 4rem;
+  background-color: #021627;
+  color: white;
+  border: none;
+  padding: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.products {
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+  height: 100%;
+  margin: 5px;
+  padding: 10px;
+}
+
+.table {
+  margin: 10px;
 }
 
 
-
-.titulo{
-    text-align: center;
+.titleProd {
+    height: 4rem;
     vertical-align: middle;
-    line-height: 90px;
+    line-height: 2rem;
+    font-weight: bold;
 }
-.miniImagen{
-    height: 50px;
-    width: 100px;
+
+.titleDes {
+    vertical-align: middle;
+    height: 12rem;
+}
+
+.titlePrice {
+    vertical-align: middle;
+    line-height: 2rem;
+    margin: 5px;
+}
+
+.titleBut{
+
+  background-color: #021627;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  height: 3rem;
+  width: 7rem;
 }

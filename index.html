@@ -1,45 +1,91 @@
  <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Parcial1 Nicolas De la Hoz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
     <nav class="row">
-        <div class="col-10">
-            Restaurant & Lounge
-        </div>
+      <div class="col-9 empresa">Restaurant & Lounge</div>
 
-        <div class=" col-1 LogoCarrito"> 
-            <img class="logo" src="CarroCompras.png" alt="Carrito de compras">
-        </div>
-        <div id ="items" class=" col-1 items"> 
-            0 items
-        </div>
+      <div class="col-1 LogoCarrito">
+        <button class="carrito" onclick="listaCarrito()">
+          <img class="logo" src="CarroCompras.png" alt="Carrito de compras" />
+        </button>
+      </div>
+      <div id="items" class="col-2 items">0 items</div>
     </nav>
-    <hr>
-    <div class="mainImage center">
-        <img src="imagenFondo.png" alt="imagenFondo">
+    <hr />
+    <div>
+      <img class="mainImage" src="imagenFondo.png" alt="imagenFondo" />
     </div>
-    <hr>
-    <div class="menu row"> 
-        <button onclick="mostrarInfo(0)" class="col 1">Burgers</button>
-        <button onclick="mostrarInfo(1)" class="col 1">Tacos</button>
-        <button onclick="mostrarInfo(2)" class="col 1">Salads</button>
-        <button onclick="mostrarInfo(3)" class="col 1">Desserts</button>
-        <button onclick="mostrarInfo(4)" class="col 1 ">Drinks & Sides</button>
+    <hr />
+    <div class="menu row">
+        <div >
+      <button onclick="mostrarInfo(0)" class="col btn-banner">Burgers</button>
+      <button onclick="mostrarInfo(1)" class="col btn-banner">Tacos</button>
+      <button onclick="mostrarInfo(2)" class="col btn-banner">Salads</button>
+      <button onclick="mostrarInfo(3)" class="col btn-banner">Desserts</button>
+      <button onclick="mostrarInfo(4)" class="col btn-banner">Drinks & Sides</button>
     </div>
-    <hr>
-    <div class ="titulo" id="title"> Oprima un boton</div>
-    <hr>
-    <div class ="row " id="contenido"></div>
+    </div>
+    <hr />
+    <div class="titulo" id="title">Oprima un boton</div>
+    <hr />
+    <div class="row" id="contenido"></div>
 
-    
-    <script src='main.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-</body>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cancel Order</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span onclick="closeModal()" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure about cancelling the order?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              onclick="cancelOrder()"
+              class="btn btn-primary"
+            >
+              Yes, I want to cancel the order
+            </button>
+            <button
+              type="button"
+              onclick="closeModal()"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              No, I want to continue adding products
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
