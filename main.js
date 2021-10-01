@@ -25,13 +25,13 @@ function mostrarInfo(n) {
 
   for (let i = 0; i < tam; i++) {
     let producto = productos[i];
-    let divProd=document.createElement("div");
-    divProd.className="col-3 div-prod"
+    let divProd = document.createElement("div");
+    divProd.className = "col-3 div-prod";
 
     let contenido = document.createElement("div");
     contenido.className = "products";
 
-    let divImg=document.createElement("div");
+    let divImg = document.createElement("div");
 
     let img = document.createElement("img");
     img.className = "miniImagen";
@@ -40,42 +40,39 @@ function mostrarInfo(n) {
 
     contenido.appendChild(divImg);
 
-    let divName=document.createElement("div");
-    
+    let divName = document.createElement("div");
 
     let name = document.createElement("h4");
     name.innerHTML = producto["name"];
-    name.className="titleProd";
+    name.className = "titleProd";
     divName.appendChild(name);
     contenido.appendChild(divName);
 
-    let divDes=document.createElement("div");
-  
+    let divDes = document.createElement("div");
 
     let description = document.createElement("p");
     description.innerHTML = producto["description"];
-    description.className="titleDes";
+    description.className = "titleDes";
     divDes.appendChild(description);
     contenido.appendChild(divDes);
 
-    let divPrice=document.createElement("div");
-    divDes.className="titlePrice";
+    let divPrice = document.createElement("div");
+    divDes.className = "titlePrice";
 
     let price = document.createElement("h4");
-    price.innerHTML = "$"+producto["price"];
-    divPrice.appendChild(price)
+    price.innerHTML = "$" + producto["price"];
+    divPrice.appendChild(price);
     contenido.appendChild(divPrice);
 
-    let divBut=document.createElement("div");
-
+    let divBut = document.createElement("div");
 
     let but = document.createElement("button");
     but.innerHTML = "Add to car";
     but.onclick = sumarCarrito;
-    but.className="titleBut";
-    divBut.appendChild(but)
+    but.className = "titleBut";
+    divBut.appendChild(but);
     contenido.appendChild(divBut);
-    
+
     divContainer.appendChild(divProd);
     divProd.appendChild(contenido);
   }
@@ -86,16 +83,16 @@ function sumarCarrito(e) {
   let items = document.getElementById("items");
   items.innerHTML = numitems + " items";
 
-  let description = e.target.parentElement.parentElement.childNodes[1].childNodes[0].innerHTML;
-  console.log(description);
+  let description =
+    e.target.parentElement.parentElement.childNodes[1].childNodes[0].innerHTML;
 
   if (description in itemsCarrito) {
     itemsCarrito[description]["Qty"]++;
   } else {
-    let price = e.target.parentElement.parentElement.childNodes[3].childNodes[0].innerHTML;
-    let realPrice=price.substr(1,);
-
-    console.log(realPrice);
+    let price =
+      e.target.parentElement.parentElement.childNodes[3].childNodes[0]
+        .innerHTML;
+    let realPrice = price.substr(1);
 
     item = {
       Qty: 1,
@@ -104,7 +101,6 @@ function sumarCarrito(e) {
     };
     itemsCarrito[description] = item;
   }
-
 }
 function listaCarrito() {
   let total = 0;
@@ -182,7 +178,7 @@ function listaCarrito() {
 
   let confirmBut = document.createElement("button");
   confirmBut.innerHTML = "Confirm order";
-  confirmBut.className="btn btn-primary";
+  confirmBut.className = "btn btn-primary";
   confirmBut.onclick = confirmButton;
 
   divConfirm.appendChild(cancelBut);
@@ -191,7 +187,7 @@ function listaCarrito() {
   divOrder.appendChild(divConfirm);
 
   let divFinal = document.createElement("div");
-  divFinal.className="contacto"
+  divFinal.className = "contacto";
   divFinal.innerHTML =
     "Contact us: +57 3102105253 - info@restaurant.com - @restaurant";
   divContainer.appendChild(divFinal);
@@ -222,6 +218,9 @@ function cancelOrder() {
   closeModal();
   itemsCarrito = {};
   listaCarrito();
+  numitems = 0;
+  let items = document.getElementById("items");
+  items.innerHTML = "0 items";
 }
 
 function confirmButton() {
